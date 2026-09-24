@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <title>Бензин есть!</title>
+    <script src="https://api.ok.ru/js/fapi5.js"></script>
+    <script src="./sdk.js"></script>
+    <script type="module" crossorigin src="./index-D1dhFKUw.js"></script>
+    <link rel="stylesheet" crossorigin href="./index-BCDhpFro.css">
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <div id="app">
+      <section id="stage">
+        <div id="hud">
+          <div class="top">
+            <button id="btnAd" class="adbtn">
+              <i id="adIcon"></i>
+              <span><b id="adLabel"></b><small id="adSub"></small></span>
+            </button>
+            <div class="wallet">
+              <div class="money"><span id="money">0</span> ₽</div>
+              <div class="rate" id="rate"></div>
+            </div>
+            <div class="side">
+              <button id="btnSound" class="round" aria-label="sound"></button>
+              <button id="btnAwards" class="round trophy" aria-label="awards"><i id="awardsIcon"></i><em id="awardsCount"></em></button>
+            </div>
+          </div>
+          <div class="flow">
+            <span id="flowPump" class="chip"><i></i><span></span></span>
+            <span id="flowSupply" class="chip"><i></i><span></span></span>
+            <span id="queue" class="chip"><i></i><span></span></span>
+          </div>
+          <div id="effects"></div>
+          <button id="btnRefill" hidden>
+            <i id="refillIcon"></i>
+            <span><b id="refillLabel"></b><small id="refillSub"></small></span>
+          </button>
+          <div id="hint"></div>
+        </div>
+      </section>
+
+      <section id="panel">
+        <nav id="tabs">
+          <button data-tab="pump" class="active"><span id="tabPump"></span><i class="dot"></i></button>
+          <button data-tab="supply"><span id="tabSupply"></span><i class="dot"></i></button>
+          <button data-tab="upg"><span id="tabUpg"></span><i class="dot"></i></button>
+          <button data-tab="city" id="tabCityBtn" hidden><span id="tabCity"></span><i class="dot"></i></button>
+        </nav>
+        <div id="buyBar">
+          <button data-n="1" class="active">×1</button>
+          <button data-n="10">×10</button>
+          <button data-n="100">×100</button>
+          <button data-n="max" id="buyMax"></button>
+        </div>
+        <div id="list"></div>
+      </section>
+    </div>
+
+    <div id="toasts"></div>
+    <div id="modal" hidden>
+      <div class="card">
+        <h2 id="modalTitle"></h2>
+        <div id="modalBody"></div>
+        <div id="modalButtons"></div>
+      </div>
+    </div>
+
+    <div id="loader">
+      <div class="logo">БЕНЗИН<br />ЕСТЬ!</div>
+      <div class="bar"><i></i></div>
+    </div>
+
+
+  </body>
+</html>
